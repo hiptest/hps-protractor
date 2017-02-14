@@ -1,4 +1,4 @@
-describe('Weird specs', function () {
+describe('Bad usage', function () {
   beforeEach(function () {
     this.actionwords = Object.create(require('./actionwords.js').Actionwords);
   browser.get('http://localhost:8000');
@@ -6,6 +6,7 @@ describe('Weird specs', function () {
 
   it('Full grounds does not block coffee', function () {
     // You keep getting coffee even if the "Empty grounds" message is displayed. That said it's not a fantastic idea, you'll get ground everywhere when you'll decide to empty it.
+    // Tags: priority:2
     // Given the coffee machine is started
     this.actionwords.theCoffeeMachineIsStarted();
     // And I handle everything except the grounds

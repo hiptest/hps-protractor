@@ -1,20 +1,11 @@
-describe('Nominal case', function () {
+describe('Support internationalisation', function () {
   beforeEach(function () {
     this.actionwords = Object.create(require('./actionwords.js').Actionwords);
   browser.get('http://localhost:8000');
   });
 
-  it('Simple use', function () {
-    // Well, sometimes, you just get a coffee.
-    // Given the coffee machine is started
-    this.actionwords.theCoffeeMachineIsStarted();
-    // When I take a coffee
-    this.actionwords.iTakeACoffee();
-    // Then coffee should be served
-    this.actionwords.coffeeShouldBeServed();
-  });
-
   it('No messages are displayed when machine is shut down', function () {
+    // Tags: priority:1
     // Given the coffee machine is started
     this.actionwords.theCoffeeMachineIsStarted();
     // When I shutdown the coffee machine
@@ -24,10 +15,11 @@ describe('Nominal case', function () {
   });
 
   describe('Messages are based on language', function () {
-    function messagesAreBasedOnLanguage (lang, ready_message) {
+    function messagesAreBasedOnLanguage (language, ready_message) {
       // Well, sometimes, you just get a coffee.
-      // When I start the coffee machine "<lang>"
-      this.actionwords.iStartTheCoffeeMachine(lang);
+      // Tags: priority:1
+      // When I start the coffee machine using language "<language>"
+      this.actionwords.iStartTheCoffeeMachineUsingLanguageLang(language);
       // Then message "<ready_message>" should be displayed
       this.actionwords.messageMessageShouldBeDisplayed(ready_message);
     }

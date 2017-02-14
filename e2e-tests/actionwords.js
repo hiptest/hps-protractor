@@ -1,5 +1,5 @@
 exports.Actionwords = {
-  iStartTheCoffeeMachine: function (lang) {
+  iStartTheCoffeeMachineUsingLanguageLang: function (lang) {
     element(by.cssContainingText('option', lang || 'en')).click();
     element(by.id('onOff')).click();
   },
@@ -58,7 +58,7 @@ exports.Actionwords = {
   },
 
   theCoffeeMachineIsStarted: function () {
-    this.iStartTheCoffeeMachine();
+    this.iStartTheCoffeeMachineUsingLanguageLang();
   },
 
   iHandleEverythingExceptTheWaterTank: function () {
@@ -93,5 +93,13 @@ exports.Actionwords = {
 
   displayedMessageIs: function (__free_text) {
     this.messageMessageShouldBeDisplayed(__free_text);
+  },
+
+  iSwitchToSettingsMode: function () {
+
+  },
+
+  settingsShouldBe: function (__datatable) {
+
   }
 };

@@ -75,7 +75,3 @@
   parameters:
   - name: __free_text
   body_hash: bba1f64e3a77edbb2889e4b336fd6787
-- name: I press 3 seconds on the coffee button
-  uid: df2cc26d-7c33-4f88-9d09-d34961da94f1
-  parameters: []
-  body_hash: d41d8cd98f00b204e9800998ecf8427e
