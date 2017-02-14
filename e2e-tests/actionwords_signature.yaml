@@ -1,5 +1,5 @@
 ---
-- name: I start the coffee machine
+- name: I start the coffee machine using language "lang"
   uid: 1221562a-427d-44bc-8cb1-fa4756c9a832
   parameters:
   - name: lang
@@ -45,7 +45,7 @@
 - name: the coffee machine is started
   uid: 8895cca1-e61d-4d7a-81ed-92b2ab5d8cc6
   parameters: []
-  body_hash: 6c0971caedd790813fd0353e22379f8c
+  body_hash: 94bc62dc775c5d18b863b3acc45e58c1
 - name: I handle everything except the water tank
   uid: 2ccd9ce3-3232-48b1-91f5-ff53f49b41ac
   parameters: []
@@ -75,3 +75,12 @@
   parameters:
   - name: __free_text
   body_hash: bba1f64e3a77edbb2889e4b336fd6787
+- name: I switch to settings mode
+  uid: df2cc26d-7c33-4f88-9d09-d34961da94f1
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: 'settings should be:'
+  uid: 9fbb6ea8-b475-4ee1-8229-bbea9ff66fa2
+  parameters:
+  - name: __datatable
+  body_hash: d41d8cd98f00b204e9800998ecf8427e

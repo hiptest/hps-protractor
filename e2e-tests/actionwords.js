@@ -92,14 +92,13 @@ exports.Actionwords = {
   },
 
   displayedMessageIs: function (__free_text) {
-    this.messageMessageShouldBeDisplayed(__free_text);
+    this.messageMessageShouldBeDisplayed(__free_text.split("\n").join(""));
   },
 
   iSwitchToSettingsMode: function () {
-
+    element(by.id('settings')).click();
   },
 
   settingsShouldBe: function (__datatable) {
-
   }
 };
