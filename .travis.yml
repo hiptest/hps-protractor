@@ -20,8 +20,6 @@ before_script:
   - hiptest-publisher --config-file=protractor.conf --token=$SECRET_TOKEN --test-run-id=52538 --only=tests
 
 script:
-  - npm run run-webdriver --standalone 2>&1 &"
-  - sleep 5
   - (npm start > /dev/null &) && (npm run protractor)
 
 after_script:
