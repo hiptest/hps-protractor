@@ -3,7 +3,7 @@ dist: trusty
 
 language: node_js
 node_js:
-  - '6'
+  - '6.9'
 
 install:
   - export DISPLAY=:99.0
@@ -19,8 +19,7 @@ before_script:
   - hiptest-publisher --config-file=protractor.conf --token=$SECRET_TOKEN --test-run-id=52538 --only=tests
 
 script:
-  - npm run run-webdriver > /dev/null &
-  - (npm start > /dev/null &) && (npm run protractor)
+  - (npm run run-webdriver &) && (npm start > /dev/null &) && (npm run protractor)
 
 after_script:
   - hiptest-publisher --config-file=protractor.conf --token=$SECRET_TOKEN --test-run-id=52538 --push="test-reports/*.xml"
