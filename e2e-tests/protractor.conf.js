@@ -4,7 +4,7 @@ exports.config = {
   allScriptsTimeout: 11000,
 
   specs: [
-    '**/*_test.js'
+    './**/*_test.js'
   ],
 
   capabilities: {
@@ -21,7 +21,7 @@ exports.config = {
     var reporters = require('jasmine-reporters')
     jasmine.getEnv().addReporter(
       new reporters.JUnitXmlReporter({
-        savePath: 'test-reports',
+        savePath: './test-reports',
         consolidateAll: false
     }));
   },
